@@ -10,6 +10,8 @@ expect - make an assertion about the target (the component)
 
 Wrapping all of the tests in callbacks lets the testing suite load
 regardless of what errors are in the code rather than crashing everything.
+
+Run npm test:watch to run tests every time you save a file
 */
 
 // Name top level describe just the component being tested
