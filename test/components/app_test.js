@@ -16,11 +16,13 @@ Run npm test:watch to run tests every time you save a file
 
 // Name top level describe just the component being tested
 describe('App', () => {
-  it('shows the correct text', () => {
 
-    // create instance of Ap
-    const component = renderComponent(App);
-
-    expect(component).to.contain('React simple starter');
+  let component;
+  beforeEach( () => {
+    component = renderComponent(App);
+  });
+  
+  it('shows a comment box', () => {
+    expect(component.find('.comment-box')).to.exist;
   });
 });
